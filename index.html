@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chemical Farmers — Creative Studio & Ventures</title>
-  <meta name="description" content="Portfolio of Chemical Farmers ventures: Oxide live merchandise auctions and AL2O3 apparel branding lab." />
+  <title>Chemical Farmers — Ventures Directory</title>
+  <meta name="description" content="A directory of active software and physical merchandise ventures built by the Chemical Farmers design lab." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -103,14 +103,14 @@
     .container {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 64px 32px 96px;
+      padding: 36px 32px 64px;
       position: relative;
       z-index: 10;
     }
 
     @media (max-width: 768px) {
       .container {
-        padding: 48px 20px 64px;
+        padding: 28px 20px 48px;
       }
     }
 
@@ -119,7 +119,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 80px;
+      margin-bottom: 24px;
     }
 
     .header-logo {
@@ -131,14 +131,60 @@
     .brand-logo {
       display: block;
       filter: drop-shadow(1.5px 1.5px 0 var(--color-ink-dark));
+      flex-shrink: 0;
     }
 
-    .header-title {
+    .header-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-eyebrow {
       font-family: var(--font-display);
-      font-size: 20px;
+      font-size: 11px;
       font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-ink-pink);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .header-title-text {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 3.5vw, 28px);
+      font-weight: 900;
+      text-transform: uppercase;
       letter-spacing: -0.02em;
+      line-height: 1.1;
+      color: var(--color-ink-dark);
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Riso shift text shadow effect */
+    .header-title-text::before {
+      content: attr(data-text);
+      position: absolute;
+      left: 1.5px;
+      top: -1px;
+      color: var(--color-ink-pink-alpha);
+      mix-blend-mode: multiply;
+      z-index: -1;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .header-title-text::after {
+      content: attr(data-text);
+      position: absolute;
+      left: -1.5px;
+      top: 1px;
+      color: var(--color-ink-blue-alpha);
+      mix-blend-mode: multiply;
+      z-index: -2;
+      opacity: 0.9;
+      pointer-events: none;
     }
 
     .header-status {
@@ -154,6 +200,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      flex-shrink: 0;
     }
 
     .status-dot {
@@ -169,56 +216,18 @@
       50% { transform: scale(1.3); opacity: 0.4; }
     }
 
-    /* ── Hero Section ── */
-    .hero {
-      margin-bottom: 80px;
-      max-width: 900px;
-    }
-
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(3.2rem, 9.5vw, 6.8rem);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: -0.04em;
-      line-height: 0.85;
-      color: var(--color-ink-dark);
+    /* ── Page Intro ── */
+    .page-intro {
       margin-bottom: 28px;
-      position: relative;
-      display: inline-block;
+      max-width: 780px;
     }
 
-    /* Riso shift text shadow effect */
-    .hero-title::before {
-      content: attr(data-text);
-      position: absolute;
-      left: 3.5px;
-      top: -3px;
-      color: var(--color-ink-pink-alpha);
-      mix-blend-mode: multiply;
-      z-index: -1;
-      opacity: 0.9;
-      pointer-events: none;
-    }
-
-    .hero-title::after {
-      content: attr(data-text);
-      position: absolute;
-      left: -3.5px;
-      top: 3px;
-      color: var(--color-ink-blue-alpha);
-      mix-blend-mode: multiply;
-      z-index: -2;
-      opacity: 0.9;
-      pointer-events: none;
-    }
-
-    .hero-sub {
-      font-size: clamp(18px, 3.5vw, 24px);
-      line-height: 1.45;
+    .page-desc-text {
+      font-size: 16px;
+      line-height: 1.5;
       font-weight: 500;
       color: var(--color-ink-dark);
-      max-width: 720px;
+      opacity: 0.85;
     }
 
     /* Brush highlighter effect */
@@ -245,9 +254,9 @@
 
     /* ── Section Header ── */
     .section-header {
-      margin-bottom: 48px;
+      margin-bottom: 24px;
       border-bottom: var(--border-heavy);
-      padding-bottom: 14px;
+      padding-bottom: 8px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -255,26 +264,27 @@
 
     .section-title {
       font-family: var(--font-display);
-      font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+      font-size: 16px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: -0.02em;
+      letter-spacing: 0.05em;
+      opacity: 0.8;
     }
 
     .section-tag {
       font-family: var(--font-display);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.08em;
-      opacity: 0.65;
+      opacity: 0.5;
     }
 
     /* ── Ventures Grid ── */
     .ventures-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 40px;
-      margin-bottom: 80px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-bottom: 64px;
     }
 
     @media (max-width: 480px) {
@@ -299,7 +309,7 @@
       border-radius: 16px;
       border: var(--border-heavy);
       z-index: 1;
-      transform: translate(8px, 8px);
+      transform: translate(6px, 6px);
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -314,7 +324,7 @@
       background: var(--color-paper);
       border: var(--border-heavy);
       border-radius: 16px;
-      padding: 36px;
+      padding: 24px;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -326,7 +336,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
 
     .card-meta {
@@ -342,7 +352,7 @@
       font-size: 10px;
       font-weight: 700;
       text-transform: uppercase;
-      padding: 4px 10px;
+      padding: 3px 8px;
       border: var(--border-light);
       border-radius: 999px;
       letter-spacing: 0.04em;
@@ -364,11 +374,11 @@
     .graphic-container {
       position: relative;
       width: 100%;
-      height: 190px;
+      height: 135px;
       background-color: var(--color-paper-shadow);
       border: var(--border-light);
       border-radius: 8px;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
       overflow: hidden;
       display: flex;
       align-items: center;
@@ -389,27 +399,27 @@
     .venture-graphic {
       width: 90%;
       height: 90%;
-      max-height: 170px;
+      max-height: 120px;
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     /* Card Details */
     .card-title {
       font-family: var(--font-display);
-      font-size: 32px;
+      font-size: 24px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
       color: var(--color-ink-dark);
     }
 
     .card-desc {
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 14px;
+      line-height: 1.5;
       opacity: 0.85;
       color: var(--color-ink-dark);
-      margin-bottom: 32px;
+      margin-bottom: 20px;
       flex-grow: 1;
     }
 
@@ -422,13 +432,13 @@
     .card-link-btn {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       font-family: var(--font-display);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.02em;
-      padding: 12px 24px;
+      padding: 10px 18px;
       border: var(--border-heavy);
       border-radius: 8px;
       background: var(--color-paper);
@@ -445,32 +455,32 @@
 
     /* Interactive Hover Transitions */
     .card-wrap:hover .card-body {
-      transform: translate(-6px, -6px);
+      transform: translate(-4px, -4px);
     }
 
     .card-wrap:hover .card-ink-shadow {
-      transform: translate(14px, 14px);
+      transform: translate(10px, 10px);
     }
 
     .card-wrap:active .card-body {
-      transform: translate(2px, 2px);
+      transform: translate(1px, 1px);
     }
 
     .card-wrap:active .card-ink-shadow {
-      transform: translate(4px, 4px);
+      transform: translate(3px, 3px);
     }
 
     /* Riso screen layers slide slightly relative to outline to feel organic */
     .card-wrap:hover .riso-layers {
-      transform: translate(3px, -2px);
+      transform: translate(2px, -1.5px);
     }
 
     .card-wrap:hover .stamp-outlines {
-      transform: translate(-1.5px, 1.5px);
+      transform: translate(-1px, 1px);
     }
 
     .card-wrap:hover .venture-graphic {
-      transform: scale(1.025);
+      transform: scale(1.02);
     }
 
     .card-wrap:hover .pink-btn {
@@ -488,7 +498,7 @@
     }
 
     .card-wrap:hover .arrow {
-      transform: translateX(4px);
+      transform: translateX(3px);
     }
 
     /* Transitions for SVG groups */
@@ -498,13 +508,13 @@
 
     /* ── Secondary Section: Studio Manifest & Logbook ── */
     .manifest-section {
-      margin-bottom: 80px;
+      margin-bottom: 64px;
     }
 
     .manifest-grid {
       display: grid;
       grid-template-columns: 1.25fr 1fr;
-      gap: 40px;
+      gap: 32px;
     }
 
     @media (max-width: 860px) {
@@ -514,27 +524,27 @@
     }
 
     .manifest-body {
-      padding: 44px;
+      padding: 32px;
     }
 
     .manifest-title {
       font-family: var(--font-display);
-      font-size: 26px;
+      font-size: 22px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: -0.02em;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .manifest-text {
-      font-size: 17px;
-      line-height: 1.7;
+      font-size: 15px;
+      line-height: 1.6;
       opacity: 0.9;
       font-weight: 500;
     }
 
     .logbook-body {
-      padding: 40px;
+      padding: 32px;
       background: var(--color-paper);
       border: var(--border-heavy);
       border-radius: 16px;
@@ -542,59 +552,59 @@
 
     .logbook-title {
       font-family: var(--font-display);
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: -0.01em;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
       border-bottom: var(--border-light);
-      padding-bottom: 10px;
+      padding-bottom: 8px;
     }
 
     .logbook-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 18px;
     }
 
     .logbook-list li {
       display: flex;
-      gap: 16px;
+      gap: 12px;
       align-items: flex-start;
     }
 
     .logbook-list li .num {
       font-family: var(--font-display);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 800;
       color: var(--color-ink-pink);
     }
 
     .logbook-list li .detail strong {
       font-family: var(--font-display);
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 700;
       display: block;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       text-transform: uppercase;
     }
 
     .logbook-list li .detail p {
-      font-size: 14px;
-      line-height: 1.5;
+      font-size: 13px;
+      line-height: 1.4;
       opacity: 0.8;
     }
 
     /* ── Footer ── */
     .footer {
       border-top: var(--border-heavy);
-      padding-top: 36px;
+      padding-top: 28px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-family: var(--font-display);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -610,7 +620,7 @@
 
     .footer-links {
       display: flex;
-      gap: 24px;
+      gap: 20px;
     }
 
     .footer-links a {
@@ -651,7 +661,7 @@
     <!-- ── Header ── -->
     <header class="header">
       <div class="header-logo">
-        <svg class="brand-logo" viewBox="0 0 100 100" width="52" height="52" aria-label="Chemical Farmers Stamp Logo">
+        <svg class="brand-logo" viewBox="0 0 100 100" width="46" height="46" aria-label="Chemical Farmers Stamp Logo">
           <!-- Overlapping translucent colors forming screen print stamps -->
           <g mix-blend-mode="multiply">
             <circle cx="43" cy="43" r="29" fill="var(--color-ink-pink)" />
@@ -662,7 +672,10 @@
           <circle cx="50" cy="50" r="43" fill="none" stroke="var(--color-ink-dark)" stroke-width="4.5" />
           <path d="M 50 12 L 50 88 M 12 50 L 88 50" stroke="var(--color-ink-dark)" stroke-dasharray="2 6" stroke-width="1.5" />
         </svg>
-        <span class="header-title">Chemical Farmers</span>
+        <div class="header-text-wrap">
+          <span class="header-eyebrow">Chemical Farmers</span>
+          <h1 class="header-title-text" data-text="Ventures Directory">Ventures Directory</h1>
+        </div>
       </div>
       <div class="header-status">
         <span class="status-dot"></span>
@@ -670,18 +683,17 @@
       </div>
     </header>
 
-    <!-- ── Hero Section ── -->
-    <main class="hero">
-      <h1 class="hero-title" data-text="Chemical Farmers">Chemical Farmers</h1>
-      <p class="hero-sub">
-        A collaborative studio and design lab blending <span class="highlight-ink pink">digital systems</span>, physical garments, and <span class="highlight-ink yellow">experimental artifacts</span>.
+    <!-- ── Page Intro (Visible title description) ── -->
+    <div class="page-intro">
+      <p class="page-desc-text">
+        A curated portfolio of active digital systems, live merchandise auctions, and experimental textile branding labs developed by the <span class="highlight-ink pink">Chemical Farmers</span> design collective.
       </p>
-    </main>
+    </div>
 
     <!-- ── Ventures Section ── -->
     <section class="ventures-section">
       <div class="section-header">
-        <h2 class="section-title">Active Ventures</h2>
+        <h2 class="section-title">Active Projects</h2>
         <p class="section-tag">CATALOG: CF-01 // CF-02</p>
       </div>
 
@@ -722,7 +734,7 @@
 
             <h3 class="card-title">Oxide</h3>
             <p class="card-desc">
-              Live auctions on exclusive Chemical Farmers merchandise. One item, one stage, one winner. We design custom garments and release them in singular batches, decided in real-time by interactive bidders.
+              Live auctions on exclusive Chemical Farmers merchandise. One item, one stage, one winner. We release limited physical specimens decided by real-time interactive bidding.
             </p>
 
             <div class="card-footer">
@@ -782,7 +794,7 @@
 
             <h3 class="card-title">AL2O3</h3>
             <p class="card-desc">
-              Experimental apparel branding website & print house. Rooted in brutalist industrial design, heavyweight materials, and physical screen-printing experiments. Customized wearable items made in finite batches.
+              Experimental apparel branding website & print house. Brutalist industrial design, heavyweight materials, and screen-printing experiments in finite batches.
             </p>
 
             <div class="card-footer">
@@ -797,7 +809,7 @@
       </div>
     </section>
 
-    <!-- ── Studio Manifest & Logbook (Secondary Section) ── -->
+    <!-- ── Secondary Section: Studio Manifest & Logbook ── -->
     <section class="manifest-section">
       <div class="manifest-grid">
         
