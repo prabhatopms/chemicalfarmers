@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/ventures/oxytocin.html",
+      "destination": "https://oxytocin.chemicalfarmers.com/",
+      "permanent": true
+    },
+    {
+      "source": "/ventures/oxytocin-privacy.html",
+      "destination": "https://oxytocin.chemicalfarmers.com/privacy",
+      "permanent": true
+    }
+  ]
+}
