@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy — Oxytocin | Chemical Farmers</title>
+  <meta name="description" content="Privacy policy for Oxytocin, the AI reply engine Chrome extension by Chemical Farmers. We collect no server-side data — everything stays on your device." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://chemicalfarmers.com/ventures/oxytocin-privacy.html" />
+
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><g mix-blend-mode=%22multiply%22><circle cx=%2243%22 cy=%2243%22 r=%2229%22 fill=%22%23ff3377%22 /><circle cx=%2257%22 cy=%2243%22 r=%2229%22 fill=%22%230047bb%22 /><circle cx=%2250%22 cy=%2257%22 r=%2229%22 fill=%22%23ffb800%22 /></g><circle cx=%2250%22 cy=%2250%22 r=%2243%22 fill=%22none%22 stroke=%22%23121215%22 stroke-width=%225%22 /></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <style>
+    .privacy-wrap {
+      position: relative;
+      margin-bottom: 48px;
+    }
+
+    .privacy-shadow {
+      position: absolute;
+      inset: 0;
+      background-color: var(--color-ink-dark);
+      border-radius: 20px;
+      border: var(--border-heavy);
+      z-index: 1;
+      transform: translate(8px, 8px);
+    }
+
+    .privacy-body {
+      position: relative;
+      z-index: 2;
+      background: var(--color-paper);
+      border: var(--border-heavy);
+      border-radius: 20px;
+      padding: 48px 56px;
+    }
+
+    @media (max-width: 768px) {
+      .privacy-body {
+        padding: 28px 24px;
+      }
+    }
+
+    .privacy-eyebrow {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.5;
+      margin-bottom: 12px;
+    }
+
+    .privacy-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+      margin-bottom: 8px;
+    }
+
+    .privacy-updated {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 0.5;
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: var(--border-light);
+    }
+
+    .privacy-section {
+      margin-bottom: 36px;
+    }
+
+    .privacy-section h2 {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+      color: var(--color-ink-dark);
+    }
+
+    .privacy-section p {
+      font-size: 15px;
+      line-height: 1.65;
+      font-weight: 500;
+      opacity: 0.85;
+      margin-bottom: 12px;
+    }
+
+    .privacy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .privacy-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .privacy-section ul li {
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 500;
+      opacity: 0.85;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .privacy-section ul li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--color-ink-pink);
+      font-weight: 800;
+    }
+
+    .privacy-contact-block {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 18px;
+      border: var(--border-heavy);
+      border-radius: 8px;
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 700;
+      background: var(--color-ink-yellow);
+      color: var(--color-ink-dark);
+      text-decoration: none;
+      box-shadow: 4px 4px 0 var(--color-ink-dark);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .privacy-contact-block:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 var(--color-ink-dark);
+    }
+
+    .back-link {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-ink-dark);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: 28px;
+      transition: border-color 0.15s;
+    }
+
+    .back-link:hover {
+      border-color: var(--color-ink-pink);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="noise-overlay" id="grain-overlay"></div>
+
+  <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+    <filter id="riso-grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.18 0" />
+    </filter>
+  </svg>
+
+  <div class="container" id="main-container">
+
+    <!-- Back Navigation -->
+    <a href="oxytocin.html" class="back-link">← Oxytocin</a>
+
+    <!-- Header -->
+    <header class="header" id="main-header">
+      <div class="header-logo" id="logo-block">
+        <svg class="brand-logo" viewBox="0 0 100 100" width="38" height="38" aria-label="Chemical Farmers Stamp Logo">
+          <g mix-blend-mode="multiply">
+            <circle cx="43" cy="43" r="29" fill="var(--color-ink-pink)" />
+            <circle cx="57" cy="43" r="29" fill="var(--color-ink-blue)" />
+            <circle cx="50" cy="57" r="29" fill="var(--color-ink-yellow)" />
+          </g>
+          <circle cx="50" cy="50" r="43" fill="none" stroke="var(--color-ink-dark)" stroke-width="4.5" />
+        </svg>
+        <span class="header-title">Chemical Farmers</span>
+      </div>
+      <div class="header-status" id="status-block">
+        <span class="status-dot"></span>
+        <span>Studio Active</span>
+      </div>
+    </header>
+
+    <!-- Privacy Policy Content -->
+    <div class="privacy-wrap">
+      <div class="privacy-shadow"></div>
+      <div class="privacy-body">
+
+        <p class="privacy-eyebrow">CF-07 // Legal</p>
+        <h1 class="privacy-title">Privacy Policy</h1>
+        <p class="privacy-updated">Oxytocin — Last updated: April 26, 2026</p>
+
+        <div class="privacy-section">
+          <h2>Overview</h2>
+          <p>
+            Oxytocin is a Chrome browser extension that helps you compose replies to Instagram direct messages using AI. This policy explains what data we collect, how it is used, and your rights as a user. The short version: we operate no servers, collect no analytics, and store nothing outside your own device.
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>Data We Collect</h2>
+          <p>The following is stored <strong>locally on your device only</strong> and is never transmitted to Chemical Farmers:</p>
+          <ul>
+            <li>Instagram direct message content</li>
+            <li>Contact names and usernames</li>
+            <li>Conversation summaries and communication style notes generated by AI</li>
+            <li>AI-generated reply drafts</li>
+          </ul>
+          <p>None of this data is transmitted to our servers. It is stored exclusively in your browser's local storage (IndexedDB).</p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>Data Sent to Third-Party AI Providers</h2>
+          <p>
+            To generate reply suggestions, Oxytocin transmits message content and conversation context to one or more of the following AI providers:
+          </p>
+          <ul>
+            <li>Anthropic (Claude)</li>
+            <li>Google (Gemini)</li>
+          </ul>
+          <p>
+            Your API keys for these services are stored locally on your device and are never shared with Chemical Farmers. Each provider's own privacy policy governs how they handle data sent to their APIs.
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>Data We Do NOT Collect</h2>
+          <p>Chemical Farmers does not:</p>
+          <ul>
+            <li>Operate servers or backend infrastructure connected to Oxytocin</li>
+            <li>Collect analytics or usage statistics</li>
+            <li>Collect your Instagram credentials or passwords</li>
+            <li>Share or sell data to third parties beyond the AI providers you configure</li>
+          </ul>
+        </div>
+
+        <div class="privacy-section">
+          <h2>Data Retention &amp; Deletion</h2>
+          <p>
+            All data stored by Oxytocin lives on your device and is fully under your control. You can delete it at any time via the Settings → "Clear All Data" option inside the extension, or by uninstalling the extension entirely.
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>Permissions</h2>
+          <p>Oxytocin requests the following browser permissions:</p>
+          <ul>
+            <li><strong>activeTab</strong> — to read the current Instagram DM thread</li>
+            <li><strong>storage</strong> — to save conversation context locally on your device</li>
+            <li><strong>sidePanel</strong> — to display the reply interface without leaving Instagram</li>
+            <li><strong>Host access to instagram.com</strong> — required to interact with DM content</li>
+          </ul>
+        </div>
+
+        <div class="privacy-section">
+          <h2>Children's Privacy</h2>
+          <p>
+            Oxytocin is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has used this extension in violation of this policy, please contact us.
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>Changes to This Policy</h2>
+          <p>
+            If this privacy policy changes, we will update the "Last updated" date at the top of this page. Continued use of the extension following any changes constitutes acceptance of the revised policy.
+          </p>
+        </div>
+
+        <div class="privacy-section">
+          <h2>Contact</h2>
+          <p>Questions about this privacy policy or how Oxytocin handles your data? Reach us at:</p>
+          <a href="mailto:contact@chemicalfarmers.com" class="privacy-contact-block">
+            contact@chemicalfarmers.com →
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="main-footer">
+      <div class="footer-left">
+        <p>&copy; 2026 Chemical Farmers. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="oxytocin.html">Oxytocin</a>
+        <a href="../">← All Ventures</a>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
